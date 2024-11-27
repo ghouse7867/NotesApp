@@ -11,7 +11,8 @@ function CreateTask() {
         try {
             await axios.post('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/tasks', { name: taskName });
             setTaskName('');
-            navigate('/tasks'); 
+            navigate('/tasks');
+        } catch (err) {
             alert('Error creating task');
         }
     };
