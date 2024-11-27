@@ -20,7 +20,7 @@ function CreateNote() {
         <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-center">Create Note</h2>
             <form className="space-y-4">
-                {/* Title Input */}
+             
                 <div>
                     <label className="block text-gray-700 font-medium mb-2">Title</label>
                     <input

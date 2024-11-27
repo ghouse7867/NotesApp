@@ -15,7 +15,7 @@ router.post('/tasks', async (req, res) => {
     }
 });
 
-// GET /tasks: Returns the current status of tasks in the queue
+
 router.get('/tasks', async (req, res) => {
     try {
         const tasks = await Task.find();
@@ -25,7 +25,7 @@ router.get('/tasks', async (req, res) => {
     }
 });
 
-// Simulate task completion (you can expand on this logic)
+
 router.put('/tasks/:id', async (req, res) => {
     try {
         const task = await Task.findByIdAndUpdate(
