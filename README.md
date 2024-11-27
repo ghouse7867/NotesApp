@@ -1,2 +1,2 @@
 # NotesApp
-Notes App using react
+Notes App using MERN
