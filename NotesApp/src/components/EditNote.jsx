@@ -24,7 +24,7 @@ function EditNote() {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:5005/notes/${id}`, { title, content });
+            await axios.put(`https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/notes/${id}`, { title, content });
             navigate('/');
         } catch (err) {
             alert('Error updating note');

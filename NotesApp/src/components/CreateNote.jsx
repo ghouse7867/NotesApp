@@ -9,7 +9,7 @@ function CreateNote() {
 
     const handleCreate = async () => {
         try {
-            await axios.post('http://localhost:5005/notes', { title, content });
+            await axios.post('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/notes', { title, content });
             navigate('/');
         } catch (err) {
             alert('Error creating note');
@@ -31,7 +31,7 @@ function CreateNote() {
                         className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
                 </div>
-                {/* Content Textarea */}
+            
                 <div>
                     <label className="block text-gray-700 font-medium mb-2">Content</label>
                     <textarea
@@ -42,7 +42,7 @@ function CreateNote() {
                         className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     ></textarea>
                 </div>
-                {/* Submit Button */}
+           
                 <button
                     type="button"
                     onClick={handleCreate}

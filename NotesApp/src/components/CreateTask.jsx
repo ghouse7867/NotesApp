@@ -9,10 +9,9 @@ function CreateTask() {
 
     const handleCreateTask = async () => {
         try {
-            await axios.post('http://localhost:5000/tasks', { name: taskName });
+            await axios.post('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/tasks', { name: taskName });
             setTaskName('');
-            navigate('/tasks'); // Redirect to task queue page after adding task
-        } catch (err) {
+            navigate('/tasks'); 
             alert('Error creating task');
         }
     };

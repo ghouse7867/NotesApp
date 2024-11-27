@@ -10,18 +10,17 @@ dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({
-    origin: '*', 
-    methods: 'GET, POST, PUT, DELETE', 
-    allowedHeaders: 'Content-Type, Authorization', 
-}));
+const corsOptions = {
+    origin: 'https://bookish-journey-pj74w957r9736wgq-5173.app.github.dev',
+  };
+app.use(cors(corsOptions));
 
-// MongoDB Connection
+
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Failed to connect to MongoDB', err));
 
-// Routes
+
 app.use('/auth', authRoutes);
 app.use('/notes', noteRoutes);
 

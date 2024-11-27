@@ -17,7 +17,7 @@ function Register() {
         }
         try {
             
-            await axios.post('http://localhost:5005/register', {
+            await axios.post('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/register', {
                 email,
                 password,
             });

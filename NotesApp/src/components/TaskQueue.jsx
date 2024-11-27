@@ -8,7 +8,7 @@ function TaskQueue() {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:5005/tasks');
+            const response = await axios.get('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/tasks');
             setTasks(response.data.tasks);
         } catch (error) {
             alert('Error fetching tasks');

@@ -4,7 +4,7 @@ const { jwtMiddleware } = require('../utils/jwt');
 
 const router = express.Router();
 
-// Create Note
+
 router.post('/', jwtMiddleware, async (req, res) => {
     const { title, content } = req.body;
     try {
@@ -20,7 +20,7 @@ router.post('/', jwtMiddleware, async (req, res) => {
     }
 });
 
-// Get Notes
+
 router.get('/', jwtMiddleware, async (req, res) => {
     try {
         const notes = await Note.find({ userId: req.user.id });
@@ -30,7 +30,7 @@ router.get('/', jwtMiddleware, async (req, res) => {
     }
 });
 
-// Update Note
+
 router.put('/:id', jwtMiddleware, async (req, res) => {
     const { title, content } = req.body;
     try {
@@ -46,7 +46,7 @@ router.put('/:id', jwtMiddleware, async (req, res) => {
     }
 });
 
-// Delete Note
+
 router.delete('/:id', jwtMiddleware, async (req, res) => {
     try {
         const note = await Note.findOneAndDelete({ _id: req.params.id, userId: req.user.id });

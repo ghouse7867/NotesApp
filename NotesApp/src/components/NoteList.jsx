@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 function NotesList() {
     const [notes, setNotes] = useState([]);
 
+
     const fetchNotes = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/notes');
+            const res = await axios.get('https://bookish-journey-pj74w957r9736wgq-5001.app.github.dev/notes');
+            console.log(res)
+            console.log(res.data)
             setNotes(res.data);
         } catch (err) {
             alert('Error fetching notes');
